@@ -40,98 +40,72 @@ section {
   padding: 40px;
 }
 
-/* Estilos del héroe */
-#hero {
-  background-image: url('hero-background.jpg');
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  padding: 200px 0;
+/* Estilos de los detalles de la película */
+#movie-details {
+  display: flex;
+  justify-content: space-between;
 }
 
-.hero-content h1 {
-  font-size: 40px;
+.movie-info {
+  flex: 1;
+}
+
+.movie-info h1 {
+  font-size: 24px;
   margin-bottom: 20px;
 }
 
-.hero-content p {
+.movie-info p {
   font-size: 18px;
-  margin-bottom: 30px;
+  line-height: 1.5;
 }
 
-.btn {
-  display: inline-block;
-  background-color: #e50914;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
+.movie-player {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Estilos del contenido */
-.movie-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
-}
-
-.movie-item {
+.video-wrapper {
   position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
   overflow: hidden;
-  border-radius: 4px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s;
 }
 
-.movie-item img {
-  max-width: 100%;
-  transition: transform 0.3s;
-}
-
-.movie-item:hover {
-  transform: scale(1.05);
-}
-
-.movie-overlay {
+video {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  opacity: 0;
-  transition: opacity 0.3s;
+  width: 100%;
+  height: 100%;
 }
 
-.movie-overlay:hover {
-  opacity: 1;
-}
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+  /* Modifica los estilos para pantallas de hasta 768px de ancho */
+  header {
+    padding: 10px;
+  }
 
-.movie-overlay h3 {
-  color: #fff;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
+  nav img {
+    max-width: 100px;
+  }
 
-.btn-watch {
-  background-color: #e50914;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
-}
+  nav ul li {
+    margin-left: 10px;
+  }
 
-/* Estilos del pie de página */
-footer {
-  background-color: #000;
-  text-align: center;
-  padding: 20px;
-  font-size: 12px;
+  section {
+    padding: 20px;
+  }
+
+  #movie-details {
+    flex-direction: column;
+  }
+
+  .movie-info {
+    margin-bottom: 20px;
+  }
 }
- 
